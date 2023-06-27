@@ -128,6 +128,11 @@ body {
 }
 
 .mainContentGoButton:hover {
-    scale: 1.01;
-    box-shadow: 0 0 0 3px #0080C1;
+    scale: 1.1;
+    background-color: #e26060;
 }
+
+button.active {
+    background-color: #0080C1;
+    color: #FFFFFF;
+    }
