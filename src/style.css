@@ -5,12 +5,11 @@
 
 @font-face {
     font-family: "StratosSkyeng";
-    src: url(/fonts/stratosskyengweb-regular.woff2) format('woff2');
+    src: url(/fonts/stratosskyengweb-regular.woff2) format("woff2");
     font-style: normal;
 }
 
 @keyframes myAnim {
-
     0%,
     100% {
         transform: rotate(0deg);
@@ -61,7 +60,7 @@ body {
 .mainContent {
     width: 480px;
     height: 459px;
-    background-color: #C2F5FF;
+    background-color: #c2f5ff;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -77,7 +76,7 @@ body {
     font-weight: 400;
     line-height: 48px;
     text-align: center;
-    Width: 208px;
+    width: 208px;
     color: #004980;
 }
 
@@ -91,33 +90,33 @@ body {
 }
 
 .mainContentButtonsLvl {
-    Width: 98px;
-    Height: 98px;
-    color: #0080C1;
+    width: 98px;
+    height: 98px;
+    color: #0080c1;
     font-size: 64px;
     font-weight: 400;
     line-height: 72px;
     text-align: center;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border: none;
     border-radius: 12px;
     transition: all 0.3s;
 }
 
 .mainContentButtonsLvl:hover {
-    box-shadow: 0 0 0 3px #0080C1;
+    box-shadow: 0 0 0 3px #0080c1;
 }
 
 .mainContentGoButton {
     margin-top: 50px;
-    Width: 246px;
-    Height: 50px;
+    width: 246px;
+    height: 50px;
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
     text-align: center;
-    color: #FFFFFF;
-    background-color: #7AC100;
+    color: #ffffff;
+    background-color: #7ac100;
     border: none;
     border-radius: 12px;
     transition: all 0.25s;
@@ -133,6 +132,40 @@ body {
 }
 
 button.active {
-    background-color: #0080C1;
-    color: #FFFFFF;
-    }
+    background-color: #0080c1;
+    color: #ffffff;
+}
+
+/* Верстка 2 игровой экран*/
+
+.bodyContentRun {
+    max-width: 1800px;
+    height: 774px;
+    background-color: #004980;
+}
+
+.headerContent {
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.allCards {
+    margin-top: 40px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(9, 1fr);
+    
+}
+
+.Card {
+    transition: all 0.25s;
+}
+
+.Card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgb(57, 248, 255);
+}
