@@ -1,3 +1,35 @@
+const renderMainPage = () => {
+    const appEl = document.getElementById('app');
+
+    const choosePageHtml = `
+    <div class="bodyContent">
+    <div class="mainContent">
+        <h1 class="mainContentTitle">Выбери сложность</h1>
+        <div class="mainContentButtons">
+            <button
+                id="lvlButton1"
+                class="mainContentButtonsLvl"
+                value="1"
+            >
+                1
+            </button>
+            <button id="lvlButton2" class="mainContentButtonsLvl">
+                2
+            </button>
+            <button id="lvlButton3" class="mainContentButtonsLvl">
+                3
+            </button>
+        </div>
+        <button id="mainGoButton" class="mainContentGoButton">
+            Старт
+        </button>
+    </div>
+</div>
+    `;
+    appEl.innerHTML = choosePageHtml
+};
+renderMainPage();
+
 let buttonLvl1 = document.getElementById("lvlButton1");
 let buttonLvl2 = document.getElementById("lvlButton2");
 let buttonLvl3 = document.getElementById("lvlButton3");

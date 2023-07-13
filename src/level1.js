@@ -1,13 +1,8 @@
-<!doctype html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <title>GameLVL3</title>
-    </head>
-    <body>
-        <div class="bodyContentRun">
+const renderChoosePage = () => {
+  const appEl = document.getElementById("appLvl1");
+
+  const choosePageHtml = `
+    <div class="bodyContentRun">
             <div class="headerContent">
                 <div>
                     <svg
@@ -38,19 +33,8 @@
             </div>
 
             <div class="allCards">
-                <img class="Card" src="/img/рубашка.svg" alt="card1" />
-                <img class="Card" src="/img/рубашка.svg" alt="card2" />
-                <img class="Card" src="/img/рубашка.svg" alt="card3" />
-                <img class="Card" src="/img/рубашка.svg" alt="card4" />
-                <img class="Card" src="/img/рубашка.svg" alt="card5" />
-                <img class="Card" src="/img/рубашка.svg" alt="card6" />
-                <img class="Card" src="/img/рубашка.svg" alt="card1" />
-                <img class="Card" src="/img/рубашка.svg" alt="card2" />
-                <img class="Card" src="/img/рубашка.svg" alt="card3" />
-                <img class="Card" src="/img/рубашка.svg" alt="card4" />
-                <img class="Card" src="/img/рубашка.svg" alt="card5" />
-                <img class="Card" src="/img/рубашка.svg" alt="card6" />
-                <img class="Card" src="/img/рубашка.svg" alt="card1" />
+
+            <img class="Card" src="/img/рубашка.svg" alt="card1" />
                 <img class="Card" src="/img/рубашка.svg" alt="card2" />
                 <img class="Card" src="/img/рубашка.svg" alt="card3" />
                 <img class="Card" src="/img/рубашка.svg" alt="card4" />
@@ -58,5 +42,7 @@
                 <img class="Card" src="/img/рубашка.svg" alt="card6" />
             </div>
         </div>
-    </body>
-</html>
+    `;
+  appEl.innerHTML = choosePageHtml;
+};
+renderChoosePage();
