@@ -1,3 +1,5 @@
+import "../src/style.css";
+
 const renderMainPage = () => {
     const appEl = document.getElementById('app');
 
@@ -26,7 +28,7 @@ const renderMainPage = () => {
     </div>
 </div>
     `;
-    appEl.innerHTML = choosePageHtml
+          appEl.innerHTML = choosePageHtml
 };
 renderMainPage();
 
