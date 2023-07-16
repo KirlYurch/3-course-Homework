@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "StratosSkyeng";
+  src: url(/static/fonts/stratosskyengweb-regular.woff2) format("woff2");
+  font-style: normal;
+}
+
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
+}
+
+body {
+  background: #004980;
+  display: flex;
+  justify-content: center;
+  font-family: "StratosSkyeng";
+}
+
+.bodyContent {
+  max-width: 1024px;
+  height: 774px;
+  background-color: #004980;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContent {
+  width: 480px;
+  height: 459px;
+  background-color: #c2f5ff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  gap: 30px;
+}
+
+.mainContentTitle {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  width: 208px;
+  color: #004980;
+}
+
+.mainContentButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.mainContentButtonsLvl {
+  width: 98px;
+  height: 98px;
+  color: #0080c1;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 72px;
+  text-align: center;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.mainContentButtonsLvl:hover {
+  box-shadow: 0 0 0 3px #0080c1;
+}
+
+.mainContentGoButton {
+  margin-top: 40px;
+  width: 246px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #7ac100;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.25s;
+}
+
+.mainContentGoButton {
+  animation: myAnim 1.1s cubic-bezier(0, 0, 0, 0) 4s 1 normal backwards;
+}
+
+.mainContentGoButton:hover {
+  scale: 1.1;
+  background-color: #e26060;
+}
+
+button.active {
+  background-color: #0080c1;
+  color: #ffffff;
+}
+
+/* Верстка 2 игровой экран*/
+
+.bodyContentRun {
+  max-width: 1800px;
+  height: 774px;
+  background-color: #004980;
+}
+
+.headerContent {
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.allCards {
+  margin-top: 40px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.cards {
+  transition: all 0.25s;
+}
+
+.cards:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgb(130, 251, 255);
+}
+
+.cards {
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.cards:active {
+  /* transform: scale(0.97); */
+  transition: transform 0.2s;
+}
+
+.back-view,
+.front-view {
+  backface-visibility: hidden;
+}
+
+.back-view {
+  position: relative;
+}
+
+.front-view {
+  position: absolute;
+  transform: rotateY(180deg);
+}
+
+.cards.flip {
+  transform: rotateY(180deg);
+}
+.timerMainAll {
+  padding-top: 15px;
+}
+
+.timerMain {
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 5px;
+}
+
+.timerTime {
+  color: #fff;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.result {
+  margin-top: 300px;
+}
+
+.resultContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  background: #c2f5ff;
+  text-align: center;
+  width: 480px;
+  height: 459px;
+}
+.resultImg {
+    margin-top: 35px;
+}
+.resultHeader {
+  color: #004980;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.resultText {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  padding-top: 28px;
+  padding-bottom: 10px;
+}
+
+.resultTime {
+  color: #000;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 72px;
+}
