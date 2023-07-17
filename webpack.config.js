@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.ts",
   mode,
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -16,6 +16,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.ts$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
       { test: /\.css$/, use: [MiniCssExtractPlugin.loader, , "css-loader"] },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -27,6 +32,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
   plugins: [
     new CopyPlugin({
       patterns: [{ from: "static", to: "static" }],
@@ -35,19 +43,7 @@ module.exports = {
       template: "./src/index.html",
       filename: "index.html", // Указываем имя выходного файла
     }),
-    new HtmlWebpackPlugin({
-      template: "./src/level1.html",
-      filename: "level1.html", // Указываем имя выходного файла
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/level2.html",
-      filename: "level2.html", // Указываем имя выходного файла
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/level3.html",
-      filename: "level3.html", // Указываем имя выходного файла
-    }),
-    new MiniCssExtractPlugin (),
+    new MiniCssExtractPlugin(),
   ],
   devtool: process.env.NODE_ENV === "production" ? false : "source-map",
   optimization: {
