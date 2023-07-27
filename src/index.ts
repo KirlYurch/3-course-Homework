@@ -273,7 +273,7 @@ const renderMainPage = () => {
     }, 5000);
   }
   
-  let interval: string | number | NodeJS.Timeout | null | undefined = null;
+  let interval: string | number | NodeJS.Timeout | undefined;
   let seconds = 0;
   let minutes = 0;
   
