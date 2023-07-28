@@ -277,7 +277,7 @@ const renderMainPage = () => {
   let seconds = 0;
   let minutes = 0;
   
-  function startTimer() {
+  export function startTimer() {
     function updateTime() {
       seconds++;
       if (seconds === 60) {
@@ -295,7 +295,9 @@ const renderMainPage = () => {
   function stopTimer(interval: string | number | NodeJS.Timeout | undefined) {
     clearInterval(interval);
   }
-  
+
+
+
   function MainGameLogic() {
     let cards = document.querySelectorAll(".cards");
     let hasFlippedCard: boolean | undefined | null = false;
@@ -406,7 +408,7 @@ const renderMainPage = () => {
   
             resetBoard();
           }, 500);
-  
+      
           stopTimer(interval);
   
           setTimeout(() => {
